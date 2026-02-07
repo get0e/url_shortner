@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+</head>
+<body>
+    <h1>URL SHORTNER</h1>
+
+    <% if (typeof id!=="undefined" && id) { %>
+        <p>
+            URL generated:
+            http://localhost:8001/<%= id %>
+        </p>
+    <% } %>
+
+    <div>
+        <form method="post" action="/url">
+            <label>Enter your original url:</label>
+            <input type="text" name="url" placeholder="http://example.com"/>
+            <button type="submit">GENERATE</button>
+        </form>
+    </div>
+    <div>
+        <% if (locals.urls){ %>
+             <table>
+                <thead>
+                    <th>s.no</th>
+                    <th>short id</th>
+                    <th>redirect</th>
+                    <th>clicks</th>
+                </thead>
+                <tbody>
+                    <% urls.forEach(function(url,index) { %>
+                     <tr> <td> hello</td> </tr>
+                  <%  })%>
+                    </tbody>
+            </table>
+        <%}%>
+    </div>
+</body>
+</html>

@@ -29,8 +29,7 @@ Mongoose
 
 📂 Project Setup
 1️⃣ Clone the repository
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/get0e/url_shortner.git
 
 2️⃣ Install dependencies
 npm install
